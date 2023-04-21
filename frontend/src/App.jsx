@@ -11,6 +11,9 @@ function App() {
           <Typography variant="h1" component="h1" mt="50px">
             Hello
           </Typography>
+          <Typography >
+            This is a test
+          </Typography>
         </Box>
       </Container>
     </>
