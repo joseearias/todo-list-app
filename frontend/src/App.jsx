@@ -1,6 +1,4 @@
-import {RouterProvider, createBrowserRouter} from "react-router-dom"
-import { Box, Container, CssBaseline, Typography } from "@mui/material";
-import Navbar from "./components/Navbar";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import RootLayout from "./pages/RootL";
 import HomePage from "./pages/Home";
 
@@ -11,16 +9,14 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <HomePage />
-      }
-    ]
-  }
-])
+        element: <HomePage />,
+      },
+    ],
+  },
+]);
 
 function App() {
-  return (
-    <RouterProvider router={router} />
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

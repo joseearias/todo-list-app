@@ -1,5 +1,5 @@
-import { Outlet } from "react-router-dom"
-import Navbar from "../components/Navbar"
+import { Outlet } from "react-router-dom";
+import Navbar from "../components/Navbar";
 
 const RootLayout = () => {
   return (
@@ -7,7 +7,7 @@ const RootLayout = () => {
       <Navbar />
       <Outlet />
     </>
-  )
-}
+  );
+};
 
-export default RootLayout
+export default RootLayout;
