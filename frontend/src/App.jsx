@@ -1,22 +1,25 @@
+import {RouterProvider, createBrowserRouter} from "react-router-dom"
 import { Box, Container, CssBaseline, Typography } from "@mui/material";
 import Navbar from "./components/Navbar";
+import RootLayout from "./pages/RootL";
+import HomePage from "./pages/Home";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <RootLayout />,
+    children: [
+      {
+        index: true,
+        element: <HomePage />
+      }
+    ]
+  }
+])
 
 function App() {
   return (
-    <>
-      <CssBaseline />
-      <Navbar />
-      <Container component="main" maxWidth="md">
-        <Box>
-          <Typography variant="h1" component="h1" mt="50px">
-            Hello
-          </Typography>
-          <Typography >
-            This is a test
-          </Typography>
-        </Box>
-      </Container>
-    </>
+    <RouterProvider router={router} />
   );
 }
 
