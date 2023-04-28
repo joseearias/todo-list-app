@@ -1,6 +1,6 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import RootLayout from "./pages/RootL";
-import HomePage from "./pages/Home";
+import RootLayout from "./pages/Root";
+import HomePage, { loader as todosLoader } from "./pages/Home";
 
 const router = createBrowserRouter([
   {
@@ -10,6 +10,7 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <HomePage />,
+        loader: todosLoader,
       },
     ],
   },

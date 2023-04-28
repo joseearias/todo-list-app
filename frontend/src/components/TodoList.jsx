@@ -1,15 +1,11 @@
-const TodoList = () => {
-  return;
+const TodoList = ({ todos }) => {
+  return (
+    <ul>
+      {todos.map((todo) => (
+        <li key={todo._id}>{todo.text}</li>
+      ))}
+    </ul>
+  );
 };
 
 export default TodoList;
-
-export const loader = async () => {
-  const response = await fetch("http://localhost:3000/todos");
-
-  if (!response.ok) {
-    console.log("There was an error handling your request");
-  } else {
-    return response;
-  }
-};
